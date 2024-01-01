@@ -1,8 +1,7 @@
 # Weather Database Project
 
 ## Overview
-This project is designed to fetch current weather data from a set of latitude / longitude coordinates from the OpenWeatherMap API and store the data in a PostgreSQL database. 
-It provides a simple way to retrieve and record weather information for analysis or display
+This project fetches current weather data from specified latitude and longitude coordinates using the OpenWeatherMap API and stores the data in a PostgreSQL database. It offers a straightforward way to collect and store weather information for various applications, and it can be configured to run automatically using a cron job.
 
 ## Features
 * Fetches real-time weather data for the coordinates location
