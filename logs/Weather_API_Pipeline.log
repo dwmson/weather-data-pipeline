@@ -4,8 +4,8 @@
 2024-02-02 15:27:14,035 - INFO - API OK: Weather data fetched successfully
 2024-02-02 15:27:14,129 - INFO - DATABASE OK: Weather data successfully inserted into database
 2024-02-02 15:27:33,032 - INFO - API OK: Weather data fetched successfully
-2024-02-02 15:27:33,075 - ERROR - DATABASE ERROR: Failed to insert data into database: column "cit" of relation "denver_weather" does not exist
-LINE 1: INSERT INTO denver_weather (api_timestamp, cit, country, con...
+2024-02-02 15:27:33,075 - ERROR - DATABASE ERROR: Failed to insert data into database: column "cit" of relation "weather" does not exist
+LINE 1: INSERT INTO weather (api_timestamp, cit, country, con...
                                                    ^
 
 2024-02-02 15:27:45,836 - INFO - API OK: Weather data fetched successfully
