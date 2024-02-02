@@ -28,6 +28,7 @@ For practical examples of logging in action, please refer to the `Weather_API_Pi
 * `requests` library for making API requests (pip install requests)
 * `psycopg2` library for integration with PostgreSQL databases (pip install psycopg2)
 * `python-decouple` library for separation of parameters
+* `logging` library for logging API and database operations
 * Sign up for an API key from [OpenWeatherMap](https://openweathermap.org)
 * Install and configure a [PostgreSQL](https://www.postgresql.org) environment and a database management tool
 
