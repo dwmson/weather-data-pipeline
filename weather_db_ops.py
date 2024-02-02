@@ -1,4 +1,5 @@
 import psycopg2
+import logging
 from decouple import config
 
 db_params = {
@@ -26,9 +27,11 @@ def insert_weather_data(weather):
             cursor.execute(query, (weather.api_timestamp, weather.city, weather.country, weather.conditions, weather.temp, weather.temp_min, weather.temp_max, weather.humidity, weather.wind_speed, weather.sunrise_timestamp, weather.sunset_timestamp))
 
             conn.commit()
+            logging.info("DATABASE OK: Weather data successfully inserted into database")
             cursor.close()
         except psycopg2.Error as e:
             print(f'Error executing SQL query: {e}')
+            logging.error(f"DATABASE ERROR: Failed to insert data into database: {e}")
         finally:
             conn.close()
     else:

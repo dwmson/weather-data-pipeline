@@ -1,6 +1,7 @@
 import requests 
 import datetime
 from decouple import config
+import logging
 
 class WeatherData:
     def __init__(self, data):
@@ -27,9 +28,11 @@ def get_weather_data():
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
+        logging.info('API OK: Weather data fetched successfully')
         return WeatherData(data)
     except requests.RequestException as e:
         print(f'Error fetching weather data: {e}')
+        logging.error(f'API ERROR: Failed to fetch weather data: {e}')
         return None 
 
 ## Test this script ##
