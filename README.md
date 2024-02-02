@@ -1,12 +1,27 @@
-# Weather Database Project
+# Weather Data Pipeline
 
-## Overview
-This project fetches current weather data from specified latitude and longitude coordinates using the OpenWeatherMap API and stores the data in a PostgreSQL database. It offers a straightforward way to collect and store weather information for various applications, and it can be configured to run automatically using a cron job.
+## Project Overview
+This project serves as an Extract-Load (EL) data pipeline, designed to streamline the process of extracting real-time weather data from an external API and loading this data directly into a structured database for efficient storage and retrieval. This EL pipeline focuses on optimizing data transfer and storage without the transformation step, ensuring that data is moved swiftly and stored in its original format.
+
+### How It Works
+* **Extract:** The first step involves connecting to the OpenWeatherMap API, where the pipeline extracts current weather data. This data includes various weather metrics such as temperature, humidity, wind speed, and other relevant atmospheric conditions.
+* **Load:** After extraction, the data is immediately loaded into a pre-defined PostgreSQL database schema. This process is designed to be efficient and reliable, ensuring that the weather data is available for querying and analysis with minimal latency.
 
 ## Features
 * Fetches real-time weather data for the coordinates location
 * Stores weather information in a PostgreSQL database for historical recording and analysis
 * Modular structure for easy extension or customization
+
+## Logging
+This project uses Python's built-in `logging` module to provide real-time insight into its operation. Logging captures important events, such as errors, warnings, and informational messages, which are invaluable for troubleshooting and monitoring the application's behavior. 
+
+### Log File Configuration
+The default logging level is set to `INFO`, capturing all operational messages, warnings, and errors. Log entries follow the format: `%(asctime)s - %(levelname)s - %(message)s`, including the timestamp, log level, and message.
+
+To customize logging settings, modify the `logging.basicConfig` call in `weather_main.py`.
+
+### Log File Samples
+For practical examples of logging in action, please refer to the `Weather_API_Pipeline.log` file located in the `logs` directory of this project. This log file illustrates entries at the `INFO` level, detailing successful operations such as API data retrieval and database insertions. Additionally, it includes instances of deliberately induced `ERROR` messages, demonstrating the logging of issues encountered during both the API fetch process and database operations.
 
 ## Prerequisites 
 * Python 3.x
