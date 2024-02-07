@@ -1,11 +1,12 @@
 # Weather Data Pipeline
 
 ## Project Overview
-This project serves as an Extract-Load (EL) data pipeline, designed to streamline the process of extracting real-time weather data from an external API and loading this data directly into a structured database for efficient storage and retrieval. This EL pipeline focuses on optimizing data transfer and storage without the transformation step, ensuring that data is moved swiftly and stored in its original format.
+This project serves as an Extract-Transform-Load (ETL) data pipeline, designed to streamline the process of extracting real-time weather data from an external API, transforming this data by filtering out unwanted information, and loading the refined data into a structured database for efficient storage and retrieval. This ETL pipeline focuses on optimizing data transfer, transformation, and storage, ensuring that the data is not only moved swiftly but is also stored in a format that enhances data quality and utility.
 
 ### How It Works
 * **Extract:** The first step involves connecting to the OpenWeatherMap API, where the pipeline extracts current weather data. This data includes various weather metrics such as temperature, humidity, wind speed, and other relevant atmospheric conditions.
-* **Load:** After extraction, the data is immediately loaded into a pre-defined PostgreSQL database schema. This process is designed to be efficient and reliable, ensuring that the weather data is available for querying and analysis with minimal latency.
+*  **Transform:** Once the data is extracted, it undergoes a transformation process where unnecessary or irrelevant data is filtered out. This step is crucial for refining the data, ensuring that only relevant and valuable information is retained for analysis. 
+* **Load:** After extraction, the data is immediately loaded into a pre-defined PostgreSQL database schema. This process is designed to be efficient and reliable, ensuring that the weather data is available for querying and analysis with minimal latency. The loading step completes the ETL pipeline, making the data accessible for further use in applications, reporting, or analytics.
 
 ## Features
 * Fetches real-time weather data for the coordinates location
