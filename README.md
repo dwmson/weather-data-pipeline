@@ -1,7 +1,7 @@
 # Weather Data Pipeline
 
 ## Project Overview
-This project serves as an Extract-Transform-Load (ETL) data pipeline, designed to streamline the process of extracting real-time weather data from an external API, transforming this data by filtering out unwanted information, and loading the refined data into a structured database for efficient storage and retrieval. This ETL pipeline focuses on optimizing data transfer, transformation, and storage, ensuring that the data is not only moved swiftly but is also stored in a format that enhances data quality and utility.
+This project serves as an Extract-Transform-Load (ETL) data pipeline, designed to streamline the process of extracting near real-time weather data from an external API, transforming this data by filtering out unwanted information, and loading the refined data into a structured database for efficient storage and retrieval. This ETL pipeline focuses on optimizing data transfer, transformation, and storage, ensuring that the data is not only moved swiftly but is also stored in a format that enhances data quality and utility.
 
 ### How It Works
 * **Extract:** The first step involves connecting to the OpenWeatherMap API, where the pipeline extracts current weather data. This data includes various weather metrics such as temperature, humidity, wind speed, and other relevant atmospheric conditions.
@@ -9,12 +9,12 @@ This project serves as an Extract-Transform-Load (ETL) data pipeline, designed t
 * **Load:** After extraction, the data is immediately loaded into a pre-defined PostgreSQL database schema. This process is designed to be efficient and reliable, ensuring that the weather data is available for querying and analysis with minimal latency. The loading step completes the ETL pipeline, making the data accessible for further use in applications, reporting, or analytics.
 
 ## Features
-* Fetches real-time weather data for the coordinates location
+* Fetches near real-time weather data for the coordinates location
 * Stores weather information in a PostgreSQL database for historical recording and analysis
 * Modular structure for easy extension or customization
 
 ## Logging
-This project uses Python's built-in `logging` module to provide real-time insight into its operation. Logging captures important events, such as errors, warnings, and informational messages, which are invaluable for troubleshooting and monitoring the application's behavior. 
+This project uses Python's built-in `logging` module to provide near real-time insight into its operation. Logging captures important events, such as errors, warnings, and informational messages, which are invaluable for troubleshooting and monitoring the application's behavior. 
 
 ### Log File Configuration
 The default logging level is set to `INFO`, capturing all operational messages, warnings, and errors. Log entries follow the format: `%(asctime)s - %(levelname)s - %(message)s`, including the timestamp, log level, and message.
